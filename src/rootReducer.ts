@@ -40,6 +40,15 @@ export const rootReducer = (state: RootState = initialState, action:Action) => {
         
             }
         }
+        case SET_STOKE_COLOR: {
+            return {
+                ...state,
+                currentStroke:{
+                    ...state.currentStroke, 
+                    ...{color:action.payload}
+            }
+        }
+     }
         default:
             return state;
     }
